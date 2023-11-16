@@ -5,7 +5,7 @@ go 1.21.2
 require (
 	github.com/acoshift/configfile v1.9.0
 	github.com/deploys-app/deploys v1.0.5-0.20231004152259-cbd7448bf275
-	golang.org/x/sync v0.4.0
+	golang.org/x/sync v0.5.0
 )
 
 require (
