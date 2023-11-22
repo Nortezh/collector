@@ -1,6 +1,6 @@
 module github.com/deploys-app/collector
 
-go 1.21.2
+go 1.21.4
 
 require (
 	github.com/acoshift/configfile v1.9.0
