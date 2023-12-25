@@ -229,6 +229,10 @@ func (w *Worker) syncProjectUsageDate(ctx context.Context, p *api.CollectorProje
 		Value: value,
 	})
 
+	if len(req.Resources) == 0 {
+		return
+	}
+
 	_, err = w.Client.Collector().SetProjectUsage(ctx, &req)
 	if err != nil {
 		slog.Error("collector: set project usage error", "error", err)
@@ -290,6 +294,10 @@ func (w *Worker) syncDeploymentUsage(ctx context.Context) {
 			})
 		}
 
+		if len(req.List) == 0 {
+			return nil
+		}
+
 		_, err = w.Client.Collector().SetDeploymentUsage(ctx, &req)
 		if err != nil {
 			slog.Error("collector: sync deployment error", "name", name, "error", err)
@@ -335,6 +343,10 @@ func (w *Worker) syncDeploymentUsage(ctx context.Context) {
 				Value:     f,
 				At:        at,
 			})
+		}
+
+		if len(req.List) == 0 {
+			return nil
 		}
 
 		_, err = w.Client.Collector().SetDiskUsage(ctx, &req)
