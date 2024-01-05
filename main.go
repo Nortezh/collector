@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/acoshift/configfile"
-	"github.com/deploys-app/deploys/api"
-	"github.com/deploys-app/deploys/api/client"
+	"github.com/deploys-app/api"
+	"github.com/deploys-app/api/client"
 	"golang.org/x/sync/semaphore"
 
 	"github.com/deploys-app/collector/prom"
