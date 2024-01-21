@@ -1,11 +1,11 @@
 module github.com/deploys-app/collector
 
-go 1.21.5
+go 1.21.6
 
 require (
 	github.com/acoshift/configfile v1.9.0
 	github.com/deploys-app/api v0.0.0-20240105011718-be24d6a9d4e6
-	golang.org/x/sync v0.5.0
+	golang.org/x/sync v0.6.0
 )
 
 require (
