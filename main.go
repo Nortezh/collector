@@ -29,13 +29,19 @@ func main() {
 		Timeout: 10 * time.Second,
 	}
 
-	token := config.MustString("token")
+	token := config.String("token")
+	if token == "" {
+		slog.Error("token required")
+		os.Exit(1)
+	}
+
 	w := Worker{
 		PromClient: &prom.Client{
 			Namespace: namespace,
 			Endpoint:  config.MustString("prom_endpoint"),
 		},
 		Client: &client.Client{
+			Endpoint:   config.String("api_endpoint"),
 			HTTPClient: httpClient,
 			Auth: func(r *http.Request) {
 				r.Header.Set("Authorization", "Bearer "+token)
