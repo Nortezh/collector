@@ -1,5 +1,5 @@
-github.com/acoshift/arpc/v2 v2.1.5 h1:YK+VZop41+nwvM6MPfjWd25h58vb2VbM96djR0NkGCg=
-github.com/acoshift/arpc/v2 v2.1.5/go.mod h1:1bdfjw4BcLrnSCZhsK1Nl/70nxYoCnhlDL1BXHM6GV4=
+github.com/acoshift/arpc/v2 v2.2.0 h1:OKcFyMtoZULVfs4Gfa5AQOVItaTNIgTIuOb2YzKz9AA=
+github.com/acoshift/arpc/v2 v2.2.0/go.mod h1:EZ7M0MpTTDhD8+9k+PbvGGFAoHDhs12442A6VpNDS7A=
 github.com/acoshift/configfile v1.9.0 h1:/t8DhgBdYIr15f4BkkM4bDSBWi0+ImKwWgJN/M5Hbb0=
 github.com/acoshift/configfile v1.9.0/go.mod h1:4T3q2BRRhEW4lcS0vc1Pruv0/TuBVKOb7F5vUp6ZyAY=
 github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 h1:DklsrG3dyBCFEj5IhUbnKptjxatkF07cF2ak3yi77so=
@@ -7,8 +7,8 @@ github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2/go.mod h1:W
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/deploys-app/api v0.0.0-20240105011718-be24d6a9d4e6 h1:nstwMTFOQmys8RddvQXbS5VEqgjbeIlu7LCPcSPZ2PY=
-github.com/deploys-app/api v0.0.0-20240105011718-be24d6a9d4e6/go.mod h1:MIfWZqgdhS5Sh4fg2I2vpkcy1dFsZKZI7wc5WBPeQR8=
+github.com/deploys-app/api v0.0.0-20250215111606-eb6e00c1babf h1:bSyD9Pj3u3thy+yw3DFi9FVELLbjivxjb2PqkGns9h4=
+github.com/deploys-app/api v0.0.0-20250215111606-eb6e00c1babf/go.mod h1:7aMzMAb0JD8TK9ayMTbysSQjv010nUTCJn5fSRSb2GA=
 github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=
 github.com/dustin/go-humanize v1.0.1/go.mod h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto=
 github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=
@@ -28,10 +28,10 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/rogpeppe/go-internal v1.9.0/go.mod h1:WtVeX8xhTBvf0smdhujwtBcq4Qrzq/fJaraNFVN+nFs=
 github.com/rogpeppe/go-internal v1.11.0 h1:cWPaGQEPrBb5/AsnsZesgZZ9yb1OQ+GOISoDNXVBh4M=
 github.com/rogpeppe/go-internal v1.11.0/go.mod h1:ddIwULY96R17DhadqLgMfk9H9tvdUzkipdSkR5nkCZA=
-github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
-github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
-golang.org/x/sync v0.6.0 h1:5BMeUDZ7vkXGfEr1x9B4bRcTH4lpkTkpdh0T/J+qjbQ=
-golang.org/x/sync v0.6.0/go.mod h1:Czt+wKu1gCyEFDUtn0jG5QVvpJ6rzVqr5aXyt9drQfk=
+github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOfJA=
+github.com/stretchr/testify v1.10.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
+golang.org/x/sync v0.11.0 h1:GGz8+XQP4FvTTrjZPzNKTMFtSXH80RAzG+5ghFPgK9w=
+golang.org/x/sync v0.11.0/go.mod h1:Czt+wKu1gCyEFDUtn0jG5QVvpJ6rzVqr5aXyt9drQfk=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c h1:Hei/4ADfdWqJk1ZMxUNpqntNwaWcugrBjAiHlqqRiVk=
 gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c/go.mod h1:JHkPIbrfpd72SG/EVd6muEfDQjcINNoR0C8j2r3qZ4Q=
