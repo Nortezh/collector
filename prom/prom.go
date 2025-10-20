@@ -460,7 +460,7 @@ func (c *Client) GetDiskSize() ([]*VolumeVector, error) {
 	q := make(url.Values)
 
 	q.Set("query", fmt.Sprintf(
-		`kubelet_volume_stats_capacity_bytes{namespace="%s"}`,
+		`kube_persistentvolumeclaim_resource_requests_storage_bytes{namespace="%s"}`,
 		c.Namespace,
 	))
 
