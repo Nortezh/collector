@@ -302,8 +302,9 @@ func (c *Client) SummaryEgress(projectID int64, startTimeUnix int64, dataRange s
 func (c *Client) SummaryDisk(projectID int64, startTimeUnix int64, dataRange string, rangeSecond int64) (string, error) {
 	q := make(url.Values)
 
+	// GiB-hour
 	q.Set("query", fmt.Sprintf(
-		`(sum(avg_over_time(kube_persistentvolumeclaim_resource_requests_storage_bytes{namespace="%s",persistentvolumeclaim=~".*-%d$"}[%s])) or vector(0)) * %d`,
+		`((sum(avg_over_time(kube_persistentvolumeclaim_resource_requests_storage_bytes{namespace="%s",persistentvolumeclaim=~".*-%d$"}[%s])) or vector(0)) * %d) / (1024 * 1024 * 1024 * 3600)`,
 		c.Namespace, projectID, dataRange, rangeSecond,
 	))
 	q.Set("time", strconv.FormatInt(startTimeUnix, 10))
