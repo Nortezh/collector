@@ -5,7 +5,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: asia-southeast1-docker.pkg.dev/nortezh/docker/deployer
+  IMAGE_NAME: asia-southeast1-docker.pkg.dev/nortezh/docker/collector
 
 jobs:
   build:
