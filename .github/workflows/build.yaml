@@ -27,7 +27,7 @@ jobs:
       - uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./build/api/Dockerfile
+          file: ./Dockerfile
           provenance: false
           push: true
           tags: ${{ env.IMAGE_NAME}}:${{ github.sha }}
