@@ -273,10 +273,16 @@ func (c *Client) SummaryCPU(projectID int64, startTimeUnix int64, dataRange stri
 func (c *Client) SummaryMemory(projectID int64, startTimeUnix int64, dataRange string, rangeSecond int64) (string, error) {
 	q := make(url.Values)
 
-	// 15 = scrape_interval
+	// Bill memory as max(requested, working_set) per pod, integrated over the range
+	// (byte-seconds). label_replace tags each side so `or` keeps both and `max by (pod)`
+	// picks the larger; sum across pods, scale by rangeSecond.
 	q.Set("query", fmt.Sprintf(
-		`(sum(sum_over_time(kube_pod_container_resource_requests{namespace="%s",resource="memory",pod=~".*-%d-[^-]+-[^-]+$"}[%s])) or vector(0)) * 15`,
-		c.Namespace, projectID, dataRange,
+		`(sum(max by (pod) (`+
+			`label_replace(sum by (pod) (avg_over_time(container_memory_working_set_bytes{namespace="%[1]s",name="",pod=~".*-%[2]d-[^-]+-[^-]+$"}[%[3]s])), "kind", "u", "", "")`+
+			` or `+
+			`label_replace(sum by (pod) (avg_over_time(kube_pod_container_resource_requests{namespace="%[1]s",resource="memory",pod=~".*-%[2]d-[^-]+-[^-]+$"}[%[3]s])), "kind", "r", "", "")`+
+			`)) or vector(0)) * %[4]d`,
+		c.Namespace, projectID, dataRange, rangeSecond,
 	))
 	q.Set("time", strconv.FormatInt(startTimeUnix, 10))
 
